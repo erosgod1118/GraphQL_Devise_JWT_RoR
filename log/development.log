@@ -1,0 +1,316 @@
+Started GET "/" for ::1 at 2023-11-30 13:32:48 -0500
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 375)
+Completed 200 OK in 30ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-11-30 19:22:03.900700', '2023-11-30 19:22:03.900703') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLinks (20231130191803)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "links" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231130191803') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLink Create (0.5ms)[0m  [1m[32mINSERT INTO "links" ("url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["url", "http://graphql.org/"], ["description", "The Best Query Language"], ["created_at", "2023-11-30 19:24:48.590709"], ["updated_at", "2023-11-30 19:24:48.590709"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLink Create (0.4ms)[0m  [1m[32mINSERT INTO "links" ("url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["url", "http://dev.apollodata.com/"], ["description", "Awesome GraphQL Client"], ["created_at", "2023-11-30 19:25:01.638080"], ["updated_at", "2023-11-30 19:25:01.638080"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2023-11-30 14:50:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 374)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3466)
+
+
+Started GET "/graphiql" for ::1 at 2023-11-30 14:50:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/graphiql"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-11-30 14:50:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/graphiql" for ::1 at 2023-11-30 15:05:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"graphql#execute"}
+  Rendering /usr/share/rvm/gems/ruby-3.2.2/gems/graphiql-rails-1.9.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.2.2/gems/graphiql-rails-1.9.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 831.8ms | Allocations: 89744)
+Completed 200 OK in 840ms (Views: 834.9ms | ActiveRecord: 0.0ms | Allocations: 93134)
+
+
+Started GET "/assets/graphiql/rails/application-de6fa9ce6a43852290498772ee60ab5b8e1820ee1b1c782a8d5cdb7ab50fc419.css" for ::1 at 2023-11-30 15:05:47 -0500
+Started GET "/assets/graphiql/rails/application-3b763aac20460e19a247660540dafda562ff7f06786362de149704e6d280f825.js" for ::1 at 2023-11-30 15:05:47 -0500
+Started GET "/assets/graphiql/rails/application-3b763aac20460e19a247660540dafda562ff7f06786362de149704e6d280f825.js" for ::1 at 2023-11-30 15:05:47 -0500
+Started POST "/graphql" for ::1 at 2023-11-30 15:05:47 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 66ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 12865)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:07:20 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  allLinks {\n    id,\n    url,\n    description\n  }\n}", "graphql"=>{"query"=>"{\n  allLinks {\n    id,\n    url,\n    description\n  }\n}"}}
+  [1m[36mLink Load (0.1ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 18345)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:07:28 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  allLinks {\n    id,\n    url,\n  }\n}", "graphql"=>{"query"=>"{\n  allLinks {\n    id,\n    url,\n  }\n}"}}
+  [1m[36mLink Load (0.9ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 971)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:07:40 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  allLinks {\n    url,\n  }\n}", "graphql"=>{"query"=>"{\n  allLinks {\n    url,\n  }\n}"}}
+  [1m[36mLink Load (0.1ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 935)
+
+
+Started GET "/graphiql" for ::1 at 2023-11-30 15:46:23 -0500
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"graphql#execute"}
+  Rendering /usr/share/rvm/gems/ruby-3.2.2/gems/graphiql-rails-1.9.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.2.2/gems/graphiql-rails-1.9.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 6.9ms | Allocations: 2124)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 2875)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:46:24 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Mutations::CreateLinks
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:5:in `<class:MutationType>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:4:in `<module:Types>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:3:in `<main>'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/graphql_jwt_api_schema.rb:4:in `<class:GraphqlJwtApiSchema>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/graphql_jwt_api_schema.rb:3:in `<main>'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/home/erosgod19921118/Work/graphql-jwt-api/app/controllers/graphql_controller.rb:17:in `execute'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:224:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `block in instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activerecord-7.1.2/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:160:in `process'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal.rb:227:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal.rb:309:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `each'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/etag.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/conditional_get.rb:43:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/head.rb:15:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activerecord-7.1.2/lib/active_record/migration.rb:654:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `block in tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:39:in `tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/broadcast_logger.rb:240:in `method_missing'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/runtime.rb:24:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/static.rb:25:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/sendfile.rb:114:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/engine.rb:529:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/configuration.rb:272:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/request.rb:100:in `block in handle_request'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/request.rb:99:in `handle_request'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/server.rb:443:in `process_client'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/server.rb:241:in `block in run'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Completed 500 Internal Server Error in 13ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1490)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:46:43 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"query {\n  allLinks {\n    url,\n  }\n}", "graphql"=>{"query"=>"query {\n  allLinks {\n    url,\n  }\n}"}}
+uninitialized constant Mutations::CreateLinks
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:5:in `<class:MutationType>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:4:in `<module:Types>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/types/mutation_type.rb:3:in `<main>'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/graphql_jwt_api_schema.rb:4:in `<class:GraphqlJwtApiSchema>'
+/home/erosgod19921118/Work/graphql-jwt-api/app/graphql/graphql_jwt_api_schema.rb:3:in `<main>'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/share/rvm/rubies/ruby-3.2.2/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/share/rvm/gems/ruby-3.2.2/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/home/erosgod19921118/Work/graphql-jwt-api/app/controllers/graphql_controller.rb:17:in `execute'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:224:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `block in instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `instrument'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activerecord-7.1.2/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:160:in `process'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal.rb:227:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_controller/metal.rb:309:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `each'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/etag.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/conditional_get.rb:43:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/head.rb:15:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activerecord-7.1.2/lib/active_record/migration.rb:654:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `block in tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:39:in `tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `tagged'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/broadcast_logger.rb:240:in `method_missing'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/runtime.rb:24:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/activesupport-7.1.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/static.rb:25:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/rack-3.0.8/lib/rack/sendfile.rb:114:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/actionpack-7.1.2/lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/railties-7.1.2/lib/rails/engine.rb:529:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/configuration.rb:272:in `call'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/request.rb:100:in `block in handle_request'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/request.rb:99:in `handle_request'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/server.rb:443:in `process_client'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/server.rb:241:in `block in run'
+/usr/share/rvm/gems/ruby-3.2.2/gems/puma-6.4.0/lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Completed 500 Internal Server Error in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:47:01 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"query {\n  allLinks {\n    url,\n  }\n}", "graphql"=>{"query"=>"query {\n  allLinks {\n    url,\n  }\n}"}}
+  [1m[36mLink Load (1.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 6269)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:50:42 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id,\n    url,\n    description\n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id,\n    url,\n    description\n  }\n}"}}
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:51:35 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id\n    url\n    description\n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id\n    url\n    description\n  }\n}"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 615)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:54:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id\n    url\n    description\n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  ){\n    id\n    url\n    description\n  }\n}"}}
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 6592)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:58:27 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    description\n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    description\n  }\n}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mLink Create (1.6ms)[0m  [1m[32mINSERT INTO "links" ("url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["url", "http://npmjs.com/package/graphql-tools"], ["description", "Best tools"], ["created_at", "2023-11-30 20:58:27.369790"], ["updated_at", "2023-11-30 20:58:27.369790"]]
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+Completed 200 OK in 63ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 19440)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:59:00 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    description\n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    description\n  }\n}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mLink Create (2.1ms)[0m  [1m[32mINSERT INTO "links" ("url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["url", "http://npmjs.com/package/graphql-tools"], ["description", "Best tools"], ["created_at", "2023-11-30 20:59:00.186663"], ["updated_at", "2023-11-30 20:59:00.186663"]]
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 27.8ms | Allocations: 7763)
+
+
+Started POST "/graphql" for ::1 at 2023-11-30 15:59:10 -0500
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    \n  }\n}", "graphql"=>{"query"=>"mutation {\n  createLink (input: {\n    url: \"http://npmjs.com/package/graphql-tools\",\n    description: \"Best tools\",\n  }){\n    id\n    url\n    \n  }\n}"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mLink Create (1.6ms)[0m  [1m[32mINSERT INTO "links" ("url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["url", "http://npmjs.com/package/graphql-tools"], ["description", "Best tools"], ["created_at", "2023-11-30 20:59:10.178968"], ["updated_at", "2023-11-30 20:59:10.178968"]]
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_link.rb:10:in `resolve'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2156)
+
+
