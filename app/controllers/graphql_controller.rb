@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 class GraphqlController < ApplicationController
+  before_action :authenticate_user!
 
   def execute
     variables = prepare_variables(params[:variables])

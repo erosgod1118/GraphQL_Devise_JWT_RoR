@@ -21,3 +21,6 @@ go.work.sum
 
 # Gemfile
 Gemfile.lock
+
+# Environment File
+.env
