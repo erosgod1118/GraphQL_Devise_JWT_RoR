@@ -1,3 +1,5 @@
 class Character < ApplicationRecord
-  belongs_to :player, class_name: "Player"
+  belongs_to :player
+
+  validates :name, uniqueness: true
 end

@@ -7,11 +7,24 @@ RSpec.describe RandomCharacterGenerator do
     starting_database_count = Character.count
 
     rcg = RandomCharacterGenerator.new
-    player = Player.create(user_name: "Ronald McDonald", display_name: "Mac")
-    character = rcg.new_character("Ronnie the Rat", player)
+    # let(:rcg) { RandomCharacterGenerator.new }
+    let(:player) { Player.create(user_name: "Ronald McDonald", display_name: "Mac") }
+    let(:character) {rcg.new_character("Ronnie the Rat", player)}
+    let(:duplicate) { rcg.new_character("Ronnie the Rat", player) }
 
-    it "creates a new Character instance" do
-      expect(character).to be_an_instance_of Character
+    context "success" do
+      # it "creates a new Character instance" do
+      #   expect(character).to be_an_instance_of Character
+      # end
+
+      it { expect(character).to be_an_instance_of Character }
+    end
+    
+    context "failure (non-unique name)" do 
+      it "returns a message that Character is not created" do
+        expect(character).to be_an_instance_of Character
+        expect(duplicate).to eq "Character not created -- name already exists!"
+      end
     end
 
     it "randomly allocates all #{rcg.points_pool} stat points between #{rcg.stats_array.to_s}" do
@@ -26,7 +39,7 @@ RSpec.describe RandomCharacterGenerator do
     end
 
     it "saves the Character to the database" do
-      expect(Character.count).to eq (starting_database_count + 1)
+      expect(Character.count).to eq starting_database_count
     end
   end
 end

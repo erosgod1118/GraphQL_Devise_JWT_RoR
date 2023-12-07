@@ -282,3 +282,530 @@ FOREIGN KEY ("player_id")
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:24:21.062946"], ["updated_at", "2023-12-07 09:24:21.062946"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 3], ["intelligence", 3], ["charisma", 1], ["created_at", "2023-12-07 09:24:21.121966"], ["updated_at", "2023-12-07 09:24:21.121966"], ["player_id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:33:00.654401"], ["updated_at", "2023-12-07 09:33:00.654401"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 3], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 09:33:00.684329"], ["updated_at", "2023-12-07 09:33:00.684329"], ["player_id", 18]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:33:00.687068"], ["updated_at", "2023-12-07 09:33:00.687068"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 1], ["intelligence", 3], ["charisma", 3], ["created_at", "2023-12-07 09:33:00.689692"], ["updated_at", "2023-12-07 09:33:00.689692"], ["player_id", 18]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 2], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 09:33:00.692319"], ["updated_at", "2023-12-07 09:33:00.692319"], ["player_id", 18]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:35:04.776549"], ["updated_at", "2023-12-07 09:35:04.776549"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:35:05.010097"], ["updated_at", "2023-12-07 09:35:05.010097"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:40:09.184279"], ["updated_at", "2023-12-07 09:40:09.184279"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 09:41:09.448384"], ["updated_at", "2023-12-07 09:41:09.448384"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:00:49.480069"], ["updated_at", "2023-12-07 11:00:49.480069"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:03:23.570393"], ["updated_at", "2023-12-07 11:03:23.570393"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "characters"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "characters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "strength" integer, "dexterity" integer, "intelligence" integer, "charisma" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "player_id" integer NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_characters_on_player_id" ON "characters" ("player_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "links"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "links" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "players"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_name" varchar, "display_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "jti" varchar, "name" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acharacters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "strength" integer DEFAULT NULL, "dexterity" integer DEFAULT NULL, "intelligence" integer DEFAULT NULL, "charisma" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "player_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acharacters_on_player_id" ON "acharacters" ("player_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acharacters" ("id","name","strength","dexterity","intelligence","charisma","created_at","updated_at","player_id")
+                     SELECT "id","name","strength","dexterity","intelligence","charisma","created_at","updated_at","player_id" FROM "characters"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "characters"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "characters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "strength" integer DEFAULT NULL, "dexterity" integer DEFAULT NULL, "intelligence" integer DEFAULT NULL, "charisma" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "player_id" integer NOT NULL, CONSTRAINT "fk_rails_2f5bb96dfc"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_characters_on_player_id" ON "characters" ("player_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "characters" ("id","name","strength","dexterity","intelligence","charisma","created_at","updated_at","player_id")
+                     SELECT "id","name","strength","dexterity","intelligence","charisma","created_at","updated_at","player_id" FROM "acharacters"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acharacters"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20231206083252)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20231206082117),
+(20231206081838),
+(20231204064113),
+(20231202081942),
+(20231201211605),
+(20231130191803);[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2023-12-07 11:09:12.690686', '2023-12-07 11:09:12.690690') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c022902d1d594c59d3988818caa0d69dac83bb0c', '2023-12-07 11:09:12.694361', '2023-12-07 11:09:12.694364') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:09:12.837118"], ["updated_at", "2023-12-07 11:09:12.837118"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 2], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 11:09:12.863224"], ["updated_at", "2023-12-07 11:09:12.863224"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:09:19.579565"], ["updated_at", "2023-12-07 11:09:19.579565"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 3], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 11:09:19.608274"], ["updated_at", "2023-12-07 11:09:19.608274"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:09:37.921171"], ["updated_at", "2023-12-07 11:09:37.921171"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 2], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 11:09:37.956110"], ["updated_at", "2023-12-07 11:09:37.956110"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (1.1ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:09:52.884312"], ["updated_at", "2023-12-07 11:09:52.884312"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 2], ["intelligence", 1], ["charisma", 4], ["created_at", "2023-12-07 11:09:52.904547"], ["updated_at", "2023-12-07 11:09:52.904547"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:09:52.907078"], ["updated_at", "2023-12-07 11:09:52.907078"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 2], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 11:09:52.909532"], ["updated_at", "2023-12-07 11:09:52.909532"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (1.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:10:13.423306"], ["updated_at", "2023-12-07 11:10:13.423306"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 1], ["intelligence", 1], ["charisma", 3], ["created_at", "2023-12-07 11:10:13.445761"], ["updated_at", "2023-12-07 11:10:13.445761"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 11:10:13.448976"], ["updated_at", "2023-12-07 11:10:13.448976"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 3], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 11:10:13.455312"], ["updated_at", "2023-12-07 11:10:13.455312"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:00:25.745504"], ["updated_at", "2023-12-07 14:00:25.745504"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 1], ["dexterity", 1], ["intelligence", 5], ["charisma", 2], ["created_at", "2023-12-07 14:00:25.767066"], ["updated_at", "2023-12-07 14:00:25.767066"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:00:25.771276"], ["updated_at", "2023-12-07 14:00:25.771276"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 4], ["intelligence", 2], ["charisma", 1], ["created_at", "2023-12-07 14:00:25.773647"], ["updated_at", "2023-12-07 14:00:25.773647"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:00:53.711915"], ["updated_at", "2023-12-07 14:00:53.711915"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 6], ["dexterity", 1], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:00:53.740813"], ["updated_at", "2023-12-07 14:00:53.740813"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:00:53.743392"], ["updated_at", "2023-12-07 14:00:53.743392"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 1], ["intelligence", 4], ["charisma", 1], ["created_at", "2023-12-07 14:00:53.747810"], ["updated_at", "2023-12-07 14:00:53.747810"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:05:47.678427"], ["updated_at", "2023-12-07 14:05:47.678427"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 1], ["dexterity", 5], ["intelligence", 2], ["charisma", 1], ["created_at", "2023-12-07 14:05:47.699908"], ["updated_at", "2023-12-07 14:05:47.699908"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:05:47.703047"], ["updated_at", "2023-12-07 14:05:47.703047"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 5], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:05:47.707490"], ["updated_at", "2023-12-07 14:05:47.707490"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:05:47.710989"], ["updated_at", "2023-12-07 14:05:47.710989"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 2], ["intelligence", 1], ["charisma", 3], ["created_at", "2023-12-07 14:05:47.729565"], ["updated_at", "2023-12-07 14:05:47.729565"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:26.966423"], ["updated_at", "2023-12-07 14:06:26.966423"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 4], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:06:26.995797"], ["updated_at", "2023-12-07 14:06:26.995797"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:26.998357"], ["updated_at", "2023-12-07 14:06:26.998357"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 2], ["intelligence", 2], ["charisma", 1], ["created_at", "2023-12-07 14:06:27.001002"], ["updated_at", "2023-12-07 14:06:27.001002"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:27.003492"], ["updated_at", "2023-12-07 14:06:27.003492"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 6], ["dexterity", 1], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:06:27.006014"], ["updated_at", "2023-12-07 14:06:27.006014"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (1.0ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:39.710048"], ["updated_at", "2023-12-07 14:06:39.710048"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 1], ["intelligence", 2], ["charisma", 1], ["created_at", "2023-12-07 14:06:39.738277"], ["updated_at", "2023-12-07 14:06:39.738277"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:39.740683"], ["updated_at", "2023-12-07 14:06:39.740683"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 1], ["dexterity", 6], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:06:39.744894"], ["updated_at", "2023-12-07 14:06:39.744894"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:39.767074"], ["updated_at", "2023-12-07 14:06:39.767074"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 2], ["intelligence", 2], ["charisma", 2], ["created_at", "2023-12-07 14:06:39.774131"], ["updated_at", "2023-12-07 14:06:39.774131"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:06:39.777181"], ["updated_at", "2023-12-07 14:06:39.777181"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 1], ["intelligence", 1], ["charisma", 4], ["created_at", "2023-12-07 14:06:39.779926"], ["updated_at", "2023-12-07 14:06:39.779926"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:03.606206"], ["updated_at", "2023-12-07 14:07:03.606206"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 4], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:03.630397"], ["updated_at", "2023-12-07 14:07:03.630397"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:03.632829"], ["updated_at", "2023-12-07 14:07:03.632829"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 3], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:03.636809"], ["updated_at", "2023-12-07 14:07:03.636809"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:03.648209"], ["updated_at", "2023-12-07 14:07:03.648209"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 5], ["dexterity", 2], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:03.653883"], ["updated_at", "2023-12-07 14:07:03.653883"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.8ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:03.656107"], ["updated_at", "2023-12-07 14:07:03.656107"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 2], ["dexterity", 5], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:03.660000"], ["updated_at", "2023-12-07 14:07:03.660000"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:31.670325"], ["updated_at", "2023-12-07 14:07:31.670325"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 2], ["intelligence", 2], ["charisma", 1], ["created_at", "2023-12-07 14:07:31.711921"], ["updated_at", "2023-12-07 14:07:31.711921"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:31.714650"], ["updated_at", "2023-12-07 14:07:31.714650"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 1], ["dexterity", 1], ["intelligence", 1], ["charisma", 6], ["created_at", "2023-12-07 14:07:31.718182"], ["updated_at", "2023-12-07 14:07:31.718182"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:31.721423"], ["updated_at", "2023-12-07 14:07:31.721423"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 3], ["dexterity", 4], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:31.724209"], ["updated_at", "2023-12-07 14:07:31.724209"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("user_name", "display_name", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_name", "Ronald McDonald"], ["display_name", "Mac"], ["created_at", "2023-12-07 14:07:31.726403"], ["updated_at", "2023-12-07 14:07:31.726403"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "strength", "dexterity", "intelligence", "charisma", "created_at", "updated_at", "player_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ronnie the Rat"], ["strength", 4], ["dexterity", 3], ["intelligence", 1], ["charisma", 1], ["created_at", "2023-12-07 14:07:31.728865"], ["updated_at", "2023-12-07 14:07:31.728865"], ["player_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCharacter Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = ? LIMIT ?[0m  [["name", "Ronnie the Rat"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
